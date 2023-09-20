@@ -13,7 +13,7 @@ function getQuotes() {
 }
 
 function addQuote(quote, id) {
-  quoteP.innerText = quote;
+  quoteP.innerText = `"${quote}"`;
   idNumber.innerText = id;
 }
 

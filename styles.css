@@ -79,7 +79,7 @@ main {
   border-radius: 0.9375rem;
   background: var(--Dark-Grayish-Blue);
   box-shadow: 30px 50px 80px 0 rgba(0, 0, 0, 0.1);
-  width: min(33.75rem,80vw);
+  width: min(33.75rem,90vw);
 }
 
 .card__header {
