@@ -79,6 +79,7 @@ main {
   border-radius: 0.9375rem;
   background: var(--Dark-Grayish-Blue);
   box-shadow: 30px 50px 80px 0 rgba(0, 0, 0, 0.1);
+  width: min(33.75rem,80vw);
 }
 
 .card__header {
@@ -122,7 +123,7 @@ main {
   margin: 2.5rem auto -2rem;
 }
 .card__icon:focus, .card__icon:hover{
-  box-shadow: 0px 0px 40px 0px #53FFAA;
+  box-shadow: 0 0 40px 0 #53FFAA;
 }
 .screen-reader {
   border: 0;
