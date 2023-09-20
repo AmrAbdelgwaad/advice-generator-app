@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+/* Css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Variables */
+:root {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+/* Styling the Card */
+
+body {
+  background: var(--Dark-Blue);
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  border-radius: 0.9375rem;
+  background: var(--Dark-Grayish-Blue);
+  box-shadow: 30px 50px 80px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card__header {
+  color: var(--Neon-Green);
+  text-align: center;
+  font-size: 0.8125rem;
+  letter-spacing: 0.25538rem;
+  text-transform: uppercase;
+  margin: 3rem 0 1.5rem;
+}
+
+.card__quote {
+  color: var(--Light-Cyan);
+  text-align: center;
+  font-size: 1.75rem;
+  letter-spacing: -0.01875rem;
+  margin: 0 3rem 2.5rem;
+  max-width: 27.75rem;
+}
+
+.card__pattern {
+  display: grid;
+  justify-content: center;
+}
+
+.card__btn{
+  border: none;
+  background: none;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+
+.card__icon {
+  width: 4rem;
+  height: 4rem;
+  background: var(--Neon-Green);
+  padding: 1.25rem;
+  border-radius: 50%;
+  margin: 2.5rem auto -2rem;
+}
+.card__icon:focus, .card__icon:hover{
+  box-shadow: 0px 0px 40px 0px #53FFAA;
+}
+.screen-reader {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Advice ID goes here -->
+
+    <!-- Advice text goes here -->
+    <!--<h2 id="quote"></h2>
+<p></p>
+<button id="reload">Give me another</button>-->
+
+    <main>
+      <div class="card">
+        <h1 class="card__header">Advice #<span class="id"></span></h1>
+        <p class="card__quote"></p>
+        <picture class="card__pattern">
+          <source
+            media="(max-width: 28.438rem)"
+            srcset="images/pattern-divider-mobile.svg"
+          />
+
+          <img src="images/pattern-divider-desktop.svg" alt="" />
+        </picture>
+        <button class="card__btn">
+          <div class="card__icon">
+            <img src="images/icon-dice.svg" alt="" />
+          </div>
+          <span class="screen-reader">get random quote</span>
+        </button>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
