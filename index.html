@@ -15,6 +15,9 @@
     <title>Frontend Mentor | Advice generator app</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Advice ID goes here -->
@@ -27,19 +30,18 @@
     <main>
       <div class="card">
         <h1 class="card__header">Advice #<span class="id"></span></h1>
-        <p class="card__quote"></p>
+        <blockquote class="card__quote"></blockquote>
         <picture class="card__pattern">
           <source
-            media="(max-width: 28.438rem)"
-            srcset="images/pattern-divider-mobile.svg"
+            media="(min-width: 28.438rem)"
+            srcset="images/pattern-divider-desktop.svg"
           />
 
-          <img src="images/pattern-divider-desktop.svg" alt="" />
+          <img src="images/pattern-divider-mobile.svg" alt="" />
         </picture>
         <button class="card__btn">
-          <div class="card__icon">
-            <img src="images/icon-dice.svg" alt="" />
-          </div>
+          <img src="images/icon-dice.svg" alt="" class="card__icon" />
+
           <span class="screen-reader">get random quote</span>
         </button>
       </div>
