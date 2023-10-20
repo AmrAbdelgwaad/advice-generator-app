@@ -1,23 +1,18 @@
 const API_URL = "https://api.adviceslip.com/advice";
-function get(url) {
-  return fetch(url).then((resp) => resp.json());
-}
-const API = { get };
 
-const quoteP = document.querySelector(".card__quote");
-const idNumber = document.querySelector(".id");
-function getQuotes() {
-  API.get(API_URL).then((data) =>
-    addQuote(data["slip"]["advice"], data["slip"]["id"]),
-  );
-}
+const getQuote = async () => {
+  const {
+    slip: { advice, id },
+  } = await (await fetch(API_URL)).json();
 
-function addQuote(quote, id) {
-  quoteP.innerText = `"${quote}"`;
+  const quoteP = document.querySelector(".card__quote");
+  const idNumber = document.querySelector(".id");
+
+  quoteP.innerText = `"${advice}"`;
   idNumber.innerText = id;
-}
+};
+
+document.addEventListener("DOMContentLoaded", getQuote);
 
 const reloadButton = document.querySelector(".card__btn");
-reloadButton.addEventListener("click", () => getQuotes());
-
-document.body.onload = getQuotes;
+reloadButton.addEventListener("click", getQuote);
